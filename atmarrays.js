@@ -1,16 +1,6 @@
 var details=["21909046","0852",10000,"9951409912","1432",12000];
 var transaction=[];
 var w,x;
-//let option;
-
-//var w,x,y,k;
-//var runagain=true;
-//while(runagain){
-
-//function validate(){
-	//verify();
-	//accountbalance();
-//}
 
 function verify(){
 w=document.getElementById("accountnumber").value;
@@ -42,9 +32,10 @@ function selection(w,x){
 		case "1":accountbalance(w,x);break;
 		case "2":deposit(w,x);break;
 		case "3":withdraw(w,x);break;
-		case "4":exit(w,x);break;
+		case "4":transaction-history(w,x);break;
+		case "5":exit(w,x);break;
 		}
-		}while(option!=4);
+		}while(option!=5);
 		
 }
 }
@@ -69,13 +60,15 @@ function deposit(w,x){
 						var deposit = prompt("enter amount to deposit:");
 						details[2]+=parseInt(deposit);
 						alert("your account balance is"+details[2]);
+						transaction.push(+details[2]);
 						
 						
 						}
 						else if (w==details[3] && x==details[4]) {
 							var deposit = prompt("enter amount to deposit:");
 						details[5]+=Number(deposit);
-						alert("your account balance is"+details[2]);
+						alert("your account balance is"+details[5]);
+						transaction.push(+details[5]);
 						
 						
 						}
@@ -120,5 +113,10 @@ function exit(w,x){
 		//window.location.replace("");	
 		//window.location();
 		window.location="atm_interface.html"
+}
+
+function transaction-history(w,x){					
+						alert(transaction[i]);
+
 }
 
