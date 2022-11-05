@@ -3,7 +3,11 @@
    <title>ATM</title>
    <head>
       <style>
-      body{background-color:#4525fa;}
+      body{background-color:#2B23A4;
+      		width:1200px;
+      		margin:auto;
+      		background-image: linear-gradient(to right, #1f07f7 , #9927db);
+      }
       img{border-radius: 50%;
            
 	      align-content:center;
@@ -12,39 +16,68 @@
          }
       
       .complete{
-                margin-top:100px;
+                margin-top:135px;
                 padding:20px;
-                margin-left:350px;
-      		background-color:white;
-      		margin-right:350px;
-      		border-radius:30px;
+                margin-left:250px;
+                float:center;
+      		background-color:#e6e6e8;
+      		
+      		border-radius:15px;
       		align-content:center;
       		align-items:center;
       		text-align:center;
+      		width:600px;
+      		height:600px;
       		}
-      h1{text-align:center;}
+      h1{
+      text-align:center;
+      }
       .password{
       		float:left;
       		border:none;
-     		background-color:#38cff5;
+     		background-color:;
      		border-radius:20px;
-     		width:120px;
+     		width:180px;
+     		margin-top:40px;
+     		margin-left:35px;
+     		font-size:20px;
       }
      .signup{
      		float:right;
-     		margin-top:-20px;
+     		margin-top:20px;
+     		margin-right:50px;
      		border:none;
-     		background-color:#38cff5;
+     		background-color:none;
      		border-radius:20px;
      		width:100px;
+     		font-size:20px;
      
      } 
      .place{
      		
-     		width:450px;
-     		height:35px;
-     		border-radius:20px;
+     		width:500px;
+     		height:30px;
+     		border-radius:10px;
+     		border:none;
+     		padding:10px;
+     		margin-top:20px;
+     		margin-bottom:20px;
      		
+     }
+     .login{
+     		
+     		
+     		width:525px;
+     		height:50px;
+     		border-radius:10px;
+     		border:none;
+     		padding:15px;
+     		margin-top:80px;
+     		margin-bottom:20px;
+     		text-align:center;
+     		background-image: linear-gradient(to right, #1f07f7 , #9927db);
+     		color:white;
+     		font-size:20px;
      }
       
       </style>
@@ -52,9 +85,9 @@
    <body >
    	<div class=complete>
    			
-   			<h1>WELCOME TO ATM</h1></n>
-   			<img src="my_atm" class="center"></n>
-   			<h1>LOGIN</h1></n>
+   			
+   			
+   			<h1>LOGIN NOW</h1></n>
             <form>
                <p></p>
               
@@ -66,9 +99,10 @@
                </form>
                <input class="password" type="button" value="forgot password?"><br>
                <input class="signup" type="button" value="signup" onclick="validate()"><br>
-               <input type="button" value="login" onclick="verify()"><br>
+               <input class="login"type="button" value="login" onclick="verify()"><br>
                <p></p>
-               <script src="atmarrays.js"></script>
+               <h3>IF YOU DON'T HAVE AN ACCOUNT? CLICK HERE </h3>
+               <script src="atmunlimited.js"></script>
    		
    		
    		
