@@ -55,7 +55,7 @@ function shift(){
 		initial=0;
 		document.querySelector("#current--0").innerHTML=initial;
 		if(totalscore>=100){
-			document.querySelector(".player player--0 player--active").style.backgroundColor=yellow;
+			document.getElementById(".player player--0 player--active").style.backgroundColor="yellow";
 		}
 		changing();
 		}else{
@@ -70,7 +70,7 @@ function shift(){
 		document.querySelector("#current--1").innerHTML=initial;
 		if(totalscore>=100){
 				
-				document.querySelector(".player player--1").style.backgroundColor=green;
+				document.getElementById(".player player--1").style.backgroundColor="green";
 					
 		}
 		changing();	
