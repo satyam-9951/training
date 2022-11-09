@@ -13,6 +13,7 @@ function rolldice(diceroll,current){
 				document.querySelector("#current--0").innerHTML=current;
 
 				initial=0;
+				changing();
 		
 		}else{
 		 current=diceroll;
@@ -88,21 +89,19 @@ function changing(){
 			opt=3;
 			option+=opt;
 			if(option%2==0){
-					//alert("player1");
 					opt+=1;
 					initial=0;
 					current=0;
+					//document.getElementById("#player player--1").style.backgroundColor="green";
 					
 			
 			}else{
-				//alert("player2");
 				opt+=1;
 				initial=0;
-					current=0;
-					
+				current=0;
+				//document.getElementById("#player player--0 player--active").style.backgroundColor="yellow";
 				
 				}
-				
 				
 }
 
@@ -114,6 +113,7 @@ function rolldice2(diceroll,current){
 				
 				document.querySelector("#current--0").innerHTML=current;
 				initial=0;
+				changing();
 		
 		}else{
 		 current=diceroll;
