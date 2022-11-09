@@ -57,7 +57,6 @@ function shift(){
 		document.querySelector("#current--0").innerHTML=initial;
 		if(totalscore>=100){
 			document.querySelector("section").style.backgroundColor="#2f2f2f";
-			//alert("you won the game");
 		}
 		changing();
 		}else{
@@ -73,7 +72,6 @@ function shift(){
 		if(totalscore>=100){
 				
 				document.querySelector("section1").style.backgroundColor="#2f2f2f";
-				//alert("you won the game");	
 		}
 		changing();	
 		}
@@ -93,7 +91,6 @@ function changing(){
 					opt+=1;
 					initial=0;
 					current=0;
-					//document.getElementById("#player player--1").style.backgroundColor="green";
 					document.querySelector('.player--1').classList.remove('player--active');
 					document.querySelector('.player--0').classList.add('player--active');
 			
@@ -103,7 +100,6 @@ function changing(){
 				opt+=1;
 				initial=0;
 				current=0;
-				//document.getElementById("#player player--0 player--active").style.backgroundColor="yellow";
 				document.querySelector('.player--0').classList.remove('player--active');
 					document.querySelector('.player--1').classList.add('player--active');
 				}
