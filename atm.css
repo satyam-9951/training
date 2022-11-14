@@ -1,0 +1,259 @@
+.interface{
+		background-color:#0004ed;
+		width:1200px;
+      		margin:auto;
+}
+.login-page{
+		display:none;
+		background-color:white;
+		float:center;
+		width:700px;
+		margin-left:20%;
+}
+
+.interface-button{
+		float:center;
+		background-color:;
+		width:40%;
+		height:320px;
+		margin-left:340px;
+		margin-top:300px;
+		
+}
+
+#first{
+	width:80%;
+	text-align:center;
+	margin-top:47px;
+	margin-left:35px;
+	padding:30px;
+	font-size:50px;
+	background-color:#14C4D1;
+}
+
+
+h1{
+      text-align:center;
+      }
+      .password{
+      		float:left;
+      		border:none;
+     		background-color:;
+     		border-radius:20px;
+     		width:180px;
+     		margin-top:40px;
+     		margin-left:35px;
+     		font-size:20px;
+      }
+     .signup{
+     		float:right;
+     		margin-top:20px;
+     		margin-right:50px;
+     		border:none;
+     		background-color:none;
+     		border-radius:20px;
+     		width:100px;
+     		font-size:20px;
+     
+     } 
+     .place{
+     		
+     		width:500px;
+     		height:30px;
+     		border-radius:10px;
+     		border:;
+     		padding:10px;
+     		margin-top:20px;
+     		margin-bottom:20px;
+     		float:center;
+     		align-content:center;
+     		
+     }
+     .login{
+     		
+     		
+     		width:525px;
+     		height:50px;
+     		border-radius:10px;
+     		border:none;
+     		padding:15px;
+     		margin-top:80px;
+     		margin-bottom:20px;
+     		text-align:center;
+     		background-image: linear-gradient(to right, #1f07f7 , #9927db);
+     		color:white;
+     		font-size:20px;
+     }
+     .cancel{
+     		float:right;
+     		width:30px;
+     		margin-top:-40px;
+     }
+     
+     
+     
+     .head{
+				color:white;
+				padding:30px;
+				margin-left:30px;
+				margin-right:30px;
+				
+			
+			
+			}
+			
+			h3{
+				float:right;
+				margin-top:-56px;
+				margin-right:37px;
+			}
+			
+			h2{
+				color:white;
+				
+				padding:15px;
+			}
+			p{
+				color:#14C4D1;
+				font-size:22px;
+				padding-left:10px;
+				margin-bottom:-20px;
+			}
+			
+			.side-bar{
+					background-color:;
+					margin-left:10px;
+					width:20%;
+					height:500px;
+					margin-top:100px;
+					
+			}
+			
+			.right-side{
+					
+					background-color:;
+					float:right;
+					width:70%;
+					height:500px;
+					margin-top:-500px;
+					margin-right:35px;
+					
+					
+			}
+			
+			
+			
+			
+			.option,.option1{
+				float:right;
+				padding:15px;
+				background-color:#00d5ff;
+				margin-top:9px;
+				margin-left:9px;
+				width:300px;
+				height:100px;
+					
+			}
+			.option1{
+				float:left;
+				margin-left:87px;
+			}
+			
+			.option:hover,.option1:hover{
+					background-color:#002aff;
+			}
+			
+			
+			.opt{
+				color:white;
+				text-align:center;
+				  font-family: "Times New Roman", sans-serif;
+			}
+			
+			.bottom{
+				background-color:red;
+				float:right;
+				width:675px;
+				margin-right:30px;
+				height:70px;
+				
+			}
+			
+			.cash{
+				margin-left:70px;
+			}
+			
+			.bottom:hover{
+					background-color:#002aff;
+			}
+			.Quick-cash{
+				
+				float:right;
+				margin-top:-60px;
+				margin-right:45px;
+			}
+			
+			.main{
+				width:1200px;
+				margin:auto;
+				display:none;
+				
+			}
+			.atm{
+				margin-left:25px;
+				text-align:left;
+			}
+			.display{
+				color:white;
+				padding-left:-25px;
+				padding:15px;
+			}
+			
+			
+			#optwithdraw{
+					background-color:grey;
+					float:center;
+					background-color:;
+					width:40%;
+					height:280px;
+					margin-left:340px;
+					padding-top:45px;
+					padding-left:45px;
+					display:none;	
+			}
+			#withdrawvalue{
+					width:80%;
+					height:40px;
+			}
+			
+			#withdrawbutton{
+					margin-top:20px;
+					width:82%;
+					height:40px;
+					background-color:red;
+			}
+			
+			#optdeposit{
+					background-color:grey;
+					float:center;
+					background-color:;
+					width:40%;
+					height:280px;
+					margin-left:340px;
+					padding-top:45px;
+					padding-left:45px;
+					display:none;	
+			}
+			#depositvalue{
+					width:80%;
+					height:40px;
+			}
+			
+			#depositbutton{
+					margin-top:20px;
+					width:82%;
+					height:40px;
+					background-color:red;
+			}
+			
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <title>ATM</title>
+   <head>
+      <link rel="stylesheet" href="atm.css">
+   </head>
+        <body class="interface">
+        		<div class="interface-button">
+   			<button class="into" id="first">LOGIN</button><br>
+   			<button id="first">REGISTER</button>
+   			</div>
+   			
+   			<div class="login-page">
+   			<h1>LOGIN NOW</h1></n>
+            <form>
+               <p></p>
+              <span class="cancel">&times</span>
+               <input class="place" type="number" placeholder="ACCOUNT NUMBER"  Id="accountnumber"><br></n>
+               <p></p>
+              
+               <input class="place" type="number" placeholder="PIN"  Id="pin"><br></n>
+               <p></p>
+               </form>
+               <input class="password" type="button" value="forgot password?"><br>
+               <input class="signup" type="button" value="signup" onclick="validate()"><br>
+               <input class="login"type="button" value="login" onclick="sathya()"><br>
+               <p></p>
+               
+   		</div>
+   		
+   		
+   		<div class="main">
+	
+		<div class="head">
+			<h1 class="atm">ATM</h1>
+			<h3>Card Return<span class="complete">&times</span></h3>
+		
+		<div>
+		
+		</div>
+		<div class="side-bar">
+			
+			<p>Welcome</p></ln>
+			<h2 class="display" id="username">SATHYA</h2>
+			<p>Account #1</p>
+			<h2 class="display" id="userbalance">$ 66743.00</h2>
+			
+			
+			
+			
+		</div>
+		
+		<div class="right-side">
+		
+		<div class="option" id="deposit" onclick="deposit()"><h2 class="opt">Deposit</h2></div></n>
+		
+		<div class="option" id="withdraw" onclick="withdraw()"><h2 class="opt">Withdraw</h2></div>
+		
+		<div class="option1" id="transaction"><h2 class="opt">Transactions</h2></div>	
+		</div>
+		</div>
+		
+	</div>
+		<br><br><br><br>
+   		<div id="optwithdraw">
+   			<h4>ENTER MONEY<h4>
+   			<span class="cancel">&times</span>
+   			<input id="withdrawvalue" type="number" placeholder="$"><br>
+   			<button id="withdrawbutton">WITHDRAW</button>
+   		</div>
+   		<br>
+   		<div id="optdeposit">
+   			<h4>ENTER MONEY<h4>
+   			<span class="cancel">&times</span>
+   			<input id="depositvalue" type="number" placeholder="$"><br>
+   			<button id="depositbutton">DEPOSIT</button>
+   		</div>
+   		
+   		<script src="atmtask.js"></script>
+	</body>
+	
+</html>
