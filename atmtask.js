@@ -13,6 +13,7 @@ function close(){
 		document.querySelector(".login-page").style.display="none";
 		document.querySelector("#optwithdraw").style.display="none";
 		document.querySelector("#optdeposit").style.display="none";
+		document.querySelector("#.main").style.display="none";
 }
 
 //1st page script over
