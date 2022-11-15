@@ -17,7 +17,7 @@ function close(){
 }
 
 //1st page script over
-
+var i=1;
 var accountnumber=21909046;
 var pass=9951;
 var balance=10000;
@@ -28,8 +28,7 @@ var ubalance=document.querySelector("#userbalance");
 var uname=document.querySelector("#username");
 var draw=document.querySelector("#optwithdraw");
 var dip=document.querySelector("#optdeposit");
-//var trans=document.querySelector("#transaction");
-
+var tbl=document.querySelector(".result");
 
 //withdraw button function
 var wdb=document.querySelector("#withdrawbutton");
@@ -38,8 +37,7 @@ wdb.addEventListener("click",function(){
 			balance-=Number(debit);
 			ubalance.innerHTML=balance;
 			uname.innerHTML=accname;
-			transaction.push("withdrawl="+debit+":total amount="+balance+"\n");
-			//alert(transaction);
+			transaction.push({Sno:i++,type:"withdraw",amount:debit,ACbalance:balance});
 			document.querySelector(".main").style.display="block";
 			draw.style.display="none";
 });
@@ -50,8 +48,7 @@ dpb.addEventListener("click",function(){
 			balance+=Number(credit);
 			ubalance.innerHTML=balance;
 			uname.innerHTML=accname;
-			transaction.push("deposit="+credit+":total amount="+balance+"\n");
-			//console.log(transaction);
+			transaction.push({Sno:i++,type:"deposit",amount:credit,ACbalance:balance});
 			document.querySelector(".main").style.display="block";
 			dip.style.display="none";
 });
@@ -94,6 +91,23 @@ function deposit(){
 
 function transactions(){
 			
-			alert(transaction);
+			console.log(transaction);
+			
+			for(var x=0;x<transaction.length;x++){
+				
+				//var data=document.getElementsByTagName("tr");
+				tbl.innerHTML+=`<tr>
+				<td>${transaction[x].Sno}</td>
+				<td>${transaction[x].type}</td>
+				<td>${transaction[x].amount}</td>
+				<td>${transaction[x].ACbalance}</td>
+				</tr>`
+				
+				if(transaction.type==="withdraw"){
+					document.getElementByTagName("td").style.color="red";
+				}else if(transaction.type==="deposit"){
+					document.getElementByTagName("td").style.color="green";
+				}
+			}	
 }
 
