@@ -297,3 +297,53 @@
    			
    		</div>
    		
+   		
+   		var account=["21909046","9951409912","9849720878"];
+var pin=["0852","1432","9951"];
+var balance=[10000,12000,50000];
+var transaction=[];
+var w,x;
+
+
+function verify(){
+w=document.getElementById("accountnumber").value;
+x=document.getElementById("pin").value;
+
+	var i=0;
+	while(i<account.length){
+if (w==account[i] && x==pin[i]){
+	
+	alert("welcome to your account");
+	selection(w,x,i);
+	
+}
+
+	else {
+		alert("please enter correct details");
+		
+		break;
+		
+	}
+	
+	if (w==account[i] && x==pin[i]) break;}clear(w,x,i);
+
+}
+
+
+/*if(accnum==accountnumber && pinn==pass){
+	
+	alert("hello"); 
+	document.querySelector(".login-page").style.display="none";
+	document.querySelector(".main").style.display="block";
+	ubalance.innerHTML=balance;
+	uname.innerHTML=accname;
+	
+	//draw.addEventListener("click",withdraw);
+	//dip.addEventListener("click",deposit);
+	
+}
+else{
+	alert("please enter correct details");
+}
+}*/
+   		
