@@ -84,7 +84,7 @@ h1{
      		color:white;
      		font-size:20px;
      }
-     .cancel{
+     .cancel,.cancel1,.cancel2,.cancel3,.cancel4{
      		float:right;
      		width:30px;
      		margin-top:-40px;
@@ -256,12 +256,12 @@ h1{
 			
 			.tables{
 				background-color:white;
+				display:none;
 			}
 			table{
 				background-color:grey;
 				width:100%;
 				text-align:center;
-				
 			}
 			
 

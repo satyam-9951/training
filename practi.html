@@ -1,0 +1,38 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<button onclick="validate()">click here</button>
+<script>
+const acc=["1111","2222","3333"];
+const pin=["11","22","33"];
+//var accin,pinin,i;
+
+function validate(){
+	var accin=prompt("enter account number");
+	
+	let x=acc.includes(accin);
+	if(x==true){
+		var i=acc.indexOf(accin);
+		let pinn=prompt("enter pin");
+		if(i==pin.indexOf(pinn)){
+			alert("welcome to your account");
+		}else{
+			alert("wrong pin");
+		}
+	}else{
+		alert("enter correct number");
+	}
+	
+	/*var i=acc.indexOf(accin);
+	let x=acc.includes(accin);
+	console.log(i);
+	alert(i);
+	console.log(x);*/
+}
+</script>
+<body>
+</html>
+

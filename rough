@@ -346,4 +346,21 @@ else{
 	alert("please enter correct details");
 }
 }*/
+
+
+
+console.log(accnum,pinn);
+
+if(accnum==accountnumber && pinn==pass){
+	
+	alert("hello"); 
+	document.querySelector(".login-page").style.display="none";
+	document.querySelector(".main").style.display="block";
+	ubalance.innerHTML=balance;
+	uname.innerHTML=accname;
+	
+}
+else{
+	alert("please enter correct details");
+}
    		
