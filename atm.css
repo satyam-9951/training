@@ -263,5 +263,12 @@ h1{
 				width:100%;
 				text-align:center;
 			}
-			
+			#invalid{
+				background-color:orange;
+				width:50%;
+			}
+			#insufficient{
+				background-color:orange;
+				width:50%;
+			}
 

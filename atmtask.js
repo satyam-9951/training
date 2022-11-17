@@ -8,10 +8,11 @@ document.querySelector(".cancel1").addEventListener("click",closem);
 document.querySelector(".cancel2").addEventListener("click",closem1);
 document.querySelector(".cancel3").addEventListener("click",closem2);
 document.querySelector(".cancel4").addEventListener("click",closem3);
+document.querySelector(".cancel5").addEventListener("click",closem4);
+document.querySelector(".cancel6").addEventListener("click",closem5);
 function open1(){
 		document.querySelector(".login-page").style.display="block";
 }
-
 function close(){
 		document.querySelector(".login-page").style.display="none";
 }
@@ -27,6 +28,14 @@ function closem2(){
 function closem3(){
 		document.querySelector(".tables").style.display="none";
 }
+function closem4(){
+		document.querySelector("#invalid").close();
+		document.querySelector(".login-page").style.display="block";
+}
+function closem5(){
+		document.querySelector("#insufficient").close();
+}
+
 
 //1st page script over
 var i=1,ind;
@@ -46,6 +55,7 @@ var tbl=document.querySelector(".result");
 var wdb=document.querySelector("#withdrawbutton");
 wdb.addEventListener("click",function(){
 			debit=document.getElementById("withdrawvalue").value;
+			if(debit<=balance[ind]){
 			balance[ind]-=Number(debit);
 			ubalance.innerHTML=balance[ind];
 			uname.innerHTML=accname[ind];
@@ -53,6 +63,10 @@ wdb.addEventListener("click",function(){
 			document.querySelector(".main").style.display="block";
 			draw.style.display="none";
 			document.querySelector("#withdrawvalue").value="";
+			}else{
+				document.querySelector("#insufficient").showModal();
+				document.querySelector("#withdrawvalue").value="";
+			}
 });
 //deposit button function
 var dpb=document.querySelector("#depositbutton");
@@ -83,10 +97,10 @@ dpb.addEventListener("click",function(){
 				ubalance.innerHTML=balance[ind];
 				uname.innerHTML=accname[ind];
 			}else{
-				alert("enter correct pin");
+				document.querySelector("#invalid").showModal();
 			}
 		}else{
-			alert("enter correct details");
+			document.querySelector("#invalid").showModal();
 		}
 		console.log(s);
 		console.log(ind);
@@ -132,4 +146,6 @@ function transactions(){
 				}
 			}	
 }
+
+
 
