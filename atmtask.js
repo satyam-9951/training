@@ -18,12 +18,15 @@ function close(){
 }
 function closem(){
 		document.querySelector(".main").style.display="none";
+		document.querySelector(".login-page").style.display="block";
 }
 function closem1(){
 		document.querySelector("#optwithdraw").style.display="none";
+		document.querySelector(".main").style.display="block";
 }
 function closem2(){
 		document.querySelector("#optdeposit").style.display="none";
+		document.querySelector(".main").style.display="block";
 }
 function closem3(){
 		document.querySelector(".tables").style.display="none";
@@ -41,7 +44,6 @@ function closem4(){
 function closem5(){
 		document.querySelector("#insufficient").close();
 }
-
 
 //1st page script over
 var ind,index;
