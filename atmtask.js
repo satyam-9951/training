@@ -27,6 +27,12 @@ function closem2(){
 }
 function closem3(){
 		document.querySelector(".tables").style.display="none";
+		tbl.innerHTML=`<tr>
+   				<th>S.no</th>
+   				<th>TRANSACTION TYPE</th>
+   				<th>AMOUNT</th>
+   				<th>A/C BALANCE</th>
+   				</tr>`;
 }
 function closem4(){
 		document.querySelector("#invalid").close();
@@ -38,19 +44,19 @@ function closem5(){
 
 
 //1st page script over
-var i=1,ind;
+var ind,index;
 const acc=["1111","2222","3333"];
 const pin=["11","22","33"];
 var balance=[10000,8000,20000];
 const accname=["sathya","rocky","rohit"];
-var transaction=[];
+var transaction=[[],[],[]];
 var credit,debit;
 var ubalance=document.querySelector("#userbalance");
 var uname=document.querySelector("#username");
 var draw=document.querySelector("#optwithdraw");
 var dip=document.querySelector("#optdeposit");
 var tbl=document.querySelector(".result");
-
+var i=1;
 //withdraw button function
 var wdb=document.querySelector("#withdrawbutton");
 wdb.addEventListener("click",function(){
@@ -59,7 +65,7 @@ wdb.addEventListener("click",function(){
 			balance[ind]-=Number(debit);
 			ubalance.innerHTML=balance[ind];
 			uname.innerHTML=accname[ind];
-			transaction.push({Sno:i++,type:"withdraw",amount:debit,ACbalance:balance[ind]});
+			transaction[ind].push({Sno:i++,type:"withdraw",amount:debit,ACbalance:balance[ind]});
 			document.querySelector(".main").style.display="block";
 			draw.style.display="none";
 			document.querySelector("#withdrawvalue").value="";
@@ -76,7 +82,7 @@ dpb.addEventListener("click",function(){
 			console.log(balance[ind]);
 			ubalance.innerHTML=balance[ind];
 			uname.innerHTML=accname[ind];
-			transaction.push({Sno:i++,type:"deposit",amount:credit,ACbalance:balance[ind]});
+			transaction[ind].push({Sno:i++,type:"deposit",amount:credit,ACbalance:balance[ind]});
 			document.querySelector(".main").style.display="block";
 			dip.style.display="none";
 			document.querySelector("#depositvalue").value="";
@@ -85,13 +91,15 @@ dpb.addEventListener("click",function(){
 
 	function sathya(){
 	var accnum=document.getElementById("accountnumber").value;
-	
+		
 		let s=acc.includes(accnum);
 		if(s==true){
 			ind=acc.indexOf(accnum);
+			index=ind;
 			var pinn=document.getElementById("pin").value;
 			if(ind==pin.indexOf(pinn)){
 				alert("hello"); 
+				
 				document.querySelector(".login-page").style.display="none";
 				document.querySelector(".main").style.display="block";
 				ubalance.innerHTML=balance[ind];
@@ -124,23 +132,24 @@ function deposit(){
 
 function transactions(){
 			
-			console.log(transaction);
+			console.log(transaction[index]);
 			document.querySelector(".main").style.display="none";
 			document.querySelector(".tables").style.display="block";
-			for(let x=0;x<transaction.length;x++){
+			for(let x=0;x<transaction[index].length;x++){
 				
 				var data=document.getElementsByTagName("tr");
-				tbl.innerHTML+=`<tr>
-				<td>${transaction[x].Sno}</td>
-				<td>${transaction[x].type}</td>
-				<td>${transaction[x].amount}</td>
-				<td>${transaction[x].ACbalance}</td>
-				</tr>`
 				
-				if(transaction[x].type==="withdraw"){
+				tbl.innerHTML+=`<tr>
+				<td>${transaction[index][x].Sno}</td>
+				<td>${transaction[index][x].type}</td>
+				<td>${transaction[index][x].amount}</td>
+				<td>${transaction[index][x].ACbalance}</td>
+				</tr>`
+				 
+				if(transaction[index][x].type==="withdraw"){
 					
 					data[x+1].style.color="red";
-				}else if(transaction[x].type==="deposit"){
+				}else if(transaction[index][x].type==="deposit"){
 					
 					data[x+1].style.color="green";
 				}
