@@ -126,31 +126,94 @@ function withdraw(){
 //deposit
 
 function deposit(){
-			document.querySelector(".main").style.display="none";
-			dip.style.display="block";		
+	document.querySelector(".main").style.display="none";
+	dip.style.display="block";		
 }
 
 function transactions(){		
-			console.log(transaction[index]);
-			document.querySelector(".main").style.display="none";
-			document.querySelector(".tables").style.display="block";
-			for(let x=0;x<transaction[index].length;x++){
-				
-				var data=document.getElementsByTagName("tr");
-				
-				tbl.innerHTML+=`<tr>
-				<td>${transaction[index][x].Sno}</td>
-				<td>${transaction[index][x].type}</td>
-				<td>${transaction[index][x].amount}</td>
-				<td>${transaction[index][x].ACbalance}</td>
-				</tr>`
-				 
-				if(transaction[index][x].type==="withdraw"){
-					
-					data[x+1].style.color="red";
-				}else if(transaction[index][x].type==="deposit"){
-					
-					data[x+1].style.color="green";
-				}
-			}	
+console.log(transaction[index]);
+document.querySelector(".main").style.display="none";
+document.querySelector(".tables").style.display="block";
+tbl.innerHTML=`<tr>
+   				<th>S.no</th>
+   				<th>TRANSACTION TYPE</th>
+   				<th>AMOUNT</th>
+   				<th>A/C BALANCE</th>
+   				</tr>`;
+for(let x=0;x<transaction[index].length;x++){
+	
+	var data=document.getElementsByTagName("tr");
+	
+	tbl.innerHTML+=`<tr>
+	<td>${transaction[index][x].Sno}</td>
+	<td>${transaction[index][x].type}</td>
+	<td>${transaction[index][x].amount}</td>
+	<td>${transaction[index][x].ACbalance}</td>
+	</tr>`
+	 
+	if(transaction[index][x].type==="withdraw"){
+		
+		data[x+1].style.color="red";
+	}else if(transaction[index][x].type==="deposit"){
+		
+		data[x+1].style.color="green";
+	}
+      }	
 }
+function withhistory()
+{
+		tbl.innerHTML=`<tr>
+   				<th>S.no</th>
+   				<th>TRANSACTION TYPE</th>
+   				<th>AMOUNT</th>
+   				<th>A/C BALANCE</th>
+   				</tr>`;
+   		for(let x=0;x<transaction[index].length;x++){
+	
+	var data=document.getElementsByTagName("tr");
+	
+	tbl.innerHTML+=`<tr>
+	<td>${transaction[index][x].Sno}</td>
+	<td>${transaction[index][x].type}</td>
+	<td>${transaction[index][x].amount}</td>
+	<td>${transaction[index][x].ACbalance}</td>
+	</tr>`
+	 
+	if(transaction[index][x].type==="withdraw"){
+		
+		data[x+1].style.color="red";
+	}else if(transaction[index][x].type==="deposit"){
+		
+		data[x+1].style.display="none";
+	}
+      }		
+}
+function deposithistory()
+{
+		tbl.innerHTML=`<tr>
+   				<th>S.no</th>
+   				<th>TRANSACTION TYPE</th>
+   				<th>AMOUNT</th>
+   				<th>A/C BALANCE</th>
+   				</tr>`;
+   		for(let x=0;x<transaction[index].length;x++){
+	
+	var data=document.getElementsByTagName("tr");
+	
+	tbl.innerHTML+=`<tr>
+	<td>${transaction[index][x].Sno}</td>
+	<td>${transaction[index][x].type}</td>
+	<td>${transaction[index][x].amount}</td>
+	<td>${transaction[index][x].ACbalance}</td>
+	</tr>`
+	 
+	if(transaction[index][x].type==="withdraw"){
+		
+		data[x+1].style.display="none";
+	}else if(transaction[index][x].type==="deposit"){
+		
+		data[x+1].style.color="green";
+	}
+      }	
+}
+

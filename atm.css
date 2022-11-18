@@ -271,4 +271,12 @@ h1{
 				background-color:orange;
 				width:50%;
 			}
-
+			.diphistory{
+					float:left;
+			}
+			.withhistory{
+					float:right;
+			}
+			.completehistory{
+					margin-left:45%;
+			}
