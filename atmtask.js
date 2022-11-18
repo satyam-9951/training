@@ -58,7 +58,7 @@ var uname=document.querySelector("#username");
 var draw=document.querySelector("#optwithdraw");
 var dip=document.querySelector("#optdeposit");
 var tbl=document.querySelector(".result");
-var i=1;
+var i=1,h=0;
 //withdraw button function
 var wdb=document.querySelector("#withdrawbutton");
 wdb.addEventListener("click",function(){
@@ -139,7 +139,7 @@ tbl.innerHTML=`<tr>
    				<th>TRANSACTION TYPE</th>
    				<th>AMOUNT</th>
    				<th>A/C BALANCE</th>
-   				</tr>`;
+   				</tr>`;				
 for(let x=0;x<transaction[index].length;x++){
 	
 	var data=document.getElementsByTagName("tr");
@@ -150,17 +150,25 @@ for(let x=0;x<transaction[index].length;x++){
 	<td>${transaction[index][x].amount}</td>
 	<td>${transaction[index][x].ACbalance}</td>
 	</tr>`
-	 
-	if(transaction[index][x].type==="withdraw"){
-		
+	console.log(h);
+	if(transaction[index][x].type==="withdraw")
+	{
+		if(h==1){
+			data[x+1].style.display="none";
+		}else{
 		data[x+1].style.color="red";
-	}else if(transaction[index][x].type==="deposit"){
-		
+		}
+	}
+	else if(transaction[index][x].type==="deposit")
+	{
+		if(h==2){
+		data[x+1].style.display="none";
+		}else{
 		data[x+1].style.color="green";
 	}
-      }	
+        }	
 }
-function withhistory()
+/*function withhistory()
 {
 		tbl.innerHTML=`<tr>
    				<th>S.no</th>
@@ -215,5 +223,5 @@ function deposithistory()
 		data[x+1].style.color="green";
 	}
       }	
+}*/
 }
-
