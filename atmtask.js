@@ -90,7 +90,6 @@ dpb.addEventListener("click",function(){
 			document.querySelector("#depositvalue").value="";
 });
 
-
 	function sathya(){
 	var accnum=document.getElementById("accountnumber").value;
 		
@@ -101,7 +100,6 @@ dpb.addEventListener("click",function(){
 			var pinn=document.getElementById("pin").value;
 			if(ind==pin.indexOf(pinn)){
 				alert("hello"); 
-				
 				document.querySelector(".login-page").style.display="none";
 				document.querySelector(".main").style.display="block";
 				ubalance.innerHTML=balance[ind];
@@ -132,8 +130,7 @@ function deposit(){
 			dip.style.display="block";		
 }
 
-function transactions(){
-			
+function transactions(){		
 			console.log(transaction[index]);
 			document.querySelector(".main").style.display="none";
 			document.querySelector(".tables").style.display="block";
@@ -157,6 +154,3 @@ function transactions(){
 				}
 			}	
 }
-
-
-
