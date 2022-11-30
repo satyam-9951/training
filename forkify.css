@@ -40,7 +40,7 @@ body{
 		background-image: linear-gradient(to bottom right, #fbdb89 , #f48982);
 		width:100px;
 		padding:6px;
-		//text-transform:uppercase;
+		color:white;
 		border:none;
 		border-radius:30px;
 		position:relative;
@@ -255,7 +255,7 @@ body{
 	}
 	.li-div{
 		float:left;
-		padding-left:px;
+		padding-left:10px;
 		width:40%;
 	}
 	.arrow{
