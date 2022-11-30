@@ -9,7 +9,6 @@ body{
 .container{
 	background-color:white;
 	width:1000px;
-	height:971.7px;
 	margin:auto;
 	border-radius:8px;
 }
@@ -125,6 +124,7 @@ body{
 	.items{
 		width:100%;
 		border-radius:0px;
+		opacity:0.5;
 	}
 	.sec{
 		text-transform:uppercase;
@@ -222,6 +222,9 @@ body{
 		overflow:hidden;
 		background-color:#f2f2f2; 
 	}
+	.container{
+		height:971.7px;
+	}
 	.process{
 		text-align:center;
 		text-transform:capitalize;
@@ -243,7 +246,8 @@ body{
 		margin-bottom:10px;
 		color:black;
 		list-style:none;
-		padding-left:55px;
+		list-style-image:url("icons-done.svg");
+		padding-left:60px;
 		display:inline-block;
 	}
 	.list{
@@ -251,6 +255,7 @@ body{
 	}
 	.li-div{
 		float:left;
+		padding-left:px;
 		width:40%;
 	}
 	.arrow{
