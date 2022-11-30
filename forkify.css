@@ -104,8 +104,8 @@ body{
 	}
 	.process-align{
 		text-align:center;
-		margin-top:6px;
-		margin-bottom:6px;
+		margin-top:px;
+		margin-bottom:px;
 	}
 	.listhead{
 		color:#de745f;
@@ -192,8 +192,8 @@ body{
 	}
 	.dec{
 			color:grey;
-			margin-top:5px;
-			margin-bottom:11px;
+			margin-top:px;
+			margin-bottom:px;
 	}
 	.first{
 		padding:12px;	
@@ -269,7 +269,7 @@ ul{
 	padding:0PX;
 }
 .left-foot{
-	background-color:;
+	background-color:white;
 	width:35%;
 	float:left;
 }
@@ -298,4 +298,8 @@ b{
 			color:white;
 			text-transform:uppercase;
 			background-image: linear-gradient(to bottom right, #fbdb89 , #f48982);
+	}
+	.process-align{
+		margin-top:0px;
+		margin-bottom:12px;
 	}
