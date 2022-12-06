@@ -16,6 +16,7 @@ for(var i=(pages*9)-9;i<pages*9;i++){
 					<p class="dec">${info.recipes[i].publisher}</p></div>
         </div>
     </li>`
+	
 }
 
 if((pages*9)==9){
