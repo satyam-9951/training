@@ -4,10 +4,13 @@ var view=document.getElementById("sathya");
 var find=document.querySelector(".search");
 const mainimg=document.querySelector(".items");
 
+var a=info.recipes.length;
+console.log(a);
 var pages=1;
+var limit=9;
 displaying();
 function displaying(){
-for(var i=(pages*9)-9;i<pages*9;i++){
+for(var i=(pages*limit)-limit;i<pages*limit;i++){
 
     view.innerHTML+=`<li>
         <div  class="list">
@@ -16,18 +19,19 @@ for(var i=(pages*9)-9;i<pages*9;i++){
 					<p class="dec">${info.recipes[i].publisher}</p></div>
         </div>
     </li>`
-	
+
 }
 
-if((pages*9)==9){
+if((pages*limit)==limit){
 		 prevpage.style.display="none";
 		 nextpage.style.display="block";
 	 }
-	 else if((pages*9)>=27 ){
+	 else if((pages*limit)==a-1){
 		 prevpage.style.display="block";
-		 nextpage.style.display="none";
+		nextpage.style.display="none";
+		 //nextpage.disabled=true;
 	 }
-	 else if( (pages*9)>9 ){
+	 else if((pages*limit)>limit ){
 		 prevpage.style.display="block";
 		 nextpage.style.display="block";
 	 }
