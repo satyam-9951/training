@@ -97,6 +97,8 @@ body{
 	}
 	.dis{
 		float:left;
+		background-color: none;
+		z-index:1;
 		overflow:hidden;
 		width:80%;
 	}
@@ -126,7 +128,8 @@ body{
 		position:relative;	
 	}
 	.items{
-		width:100%;
+		width: 650px;;
+		height: 346px;
 		border-radius:0px;
 		opacity:0.5;
 	}

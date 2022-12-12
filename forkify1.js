@@ -1,3 +1,4 @@
+//ee85146c-00c6-4198-8072-5e35edaada45
 
 var prevpage=document.querySelector(".backward");
 var nextpage=document.querySelector(".forward");
@@ -5,12 +6,16 @@ var view=document.getElementById("sathya");
 const mainimg=document.querySelector(".items");
 var find=document.querySelector(".search");
 find.addEventListener("click",searching);
+var ind=document.querySelector(".ul-div");
+var displayimage=document.querySelector(".itempic");
 
 var datas;
 var pmaterials;
+var ingredientes;
 var foods;
 var a,idn;
 var intake,ingreds;
+var listlength;
 var pages=1;
 const initialpage=1;
 var limit=9;
@@ -38,7 +43,7 @@ printing();
 	 view.innerHTML+=`<li>
         <div  class="list">
                     <div class="pic"><img class="item" src="${foods.data.recipes[i].image_url}"></div>
-                    <div class="dis" onclick="${foods.data.recipes[i]}"><p class="listhead">${foods.data.recipes[i].title}</p>
+                    <div class="dis${i} dis" onclick="printmaterials(${i})"><p class="listhead">${foods.data.recipes[i].title}</p>
 					<p class="dec">${foods.data.recipes[i].publisher}</p></div>
         </div>
 			</li>`
@@ -61,8 +66,8 @@ printing();
 		prevpage.style.display="block";
 		 nextpage.style.display="block";
 	}
-	pmaterials=document.getElementsByClassName(".dis");
-	pmaterials.addEventListener("click",printmaterials);
+	// pmaterials=document.getElementsByClassName(`.dis${i}`);
+	// pmaterials.addEventListener("click",printmaterials);
 	
 }
 
@@ -80,11 +85,27 @@ prevpage.addEventListener("click",backwardpage);
 	 printing();
 }
 
-function printmaterials(){
-		console.log("hello");
-		console.log("ijmno");
-		idn=0;
-		ingreds=0;
-		console.log(ingreds);
- }
+async function printmaterials(i){
+		// console.log("hello");
+		// console.log("ijmno");
+		ind.innerHTML="";
+		//console.log(i);
+		idn=foods.data.recipes[i].id;
+		//console.log(idn);
+		ingredientes=await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${idn}?key=3e46c822-cacf-4dac-8a9b-c2d8a05516e3`);
+		ingreds= await ingredientes.json();
+		//console.log(ingreds);
+		listlength=ingreds.data.recipe.ingredients.length;
+		//console.log(listlength);
+		
+		for(let j=0;j<listlength;j++){
+			//console.log(ingreds.data.recipe.ingredients[j]);
+			let mat=await JSON.stringify(ingreds.data.recipe.ingredients[j].quantity);
+			let qquantity=await JSON.stringify(ingreds.data.recipe.ingredients[j].unit);
+			let qdiscription=await JSON.stringify(ingreds.data.recipe.ingredients[j].description);
+			ind.innerHTML+=`<li class="li-div">${mat,qquantity,qdiscription}</li>`
+		}
+		displayimage.innerHTML=await `<img class="items" src="${ingreds.data.recipe.image_url}"></div>`;
+
+}
 
