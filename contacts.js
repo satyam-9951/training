@@ -2,12 +2,12 @@ var individual;
 var detailsdata, info, access;
 var adding = document.querySelector(".add");
 adding.addEventListener("click", contact);
-var Name = document.querySelector(".c-name").value;
+
+async function contact() {
+    var Name = document.querySelector(".c-name").value;
 var num = document.querySelector(".ph-number").value;
 var mail = document.querySelector(".date").value;
 var dob = document.querySelector(".mail").value;
-
-async function contact() {
     await fetch('http://localhost:3000/comments/', {
         method: 'POST',
         body: JSON.stringify({
@@ -63,7 +63,7 @@ async function deleting(id) {
     await fetch(`http://localhost:3000/comments/${id}`, {
         method: 'DELETE',
     })
-    console.log("jai NTR")
+    console.log("done deleting")
 }
 var formprint = document.querySelector(".form-add");
 async function editing(id, Name, num, mail, dob) {
@@ -79,7 +79,7 @@ async function editing(id, Name, num, mail, dob) {
         .then(individual => { info = individual })
     console.log(info)
 
-    console.log("jai powerstar");
+    console.log("getting to edit");
     formprint.innerHTML = "";
     formprint.innerHTML = `<h2>CONTACTS</h2>
             NAME: <input type="text" class="c-name" value="${info.name}" placeholder="contact-name"><br>
