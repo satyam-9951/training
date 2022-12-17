@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="contacts.css">
+</head>
+
+<body>
+    <div class="form-div1">
+        <form class="form-add">
+            <!-- action="http://localhost:3000/comments" method="post" -->
+            <!-- <fieldset> -->
+            <h2>CONTACTS</h2>
+            NAME: <input type="text" class="c-name" placeholder="contact-name"><br>
+            NUMBER: <input type="text" class="ph-number" placeholder="contact-number"><br>
+            DOB: <input type="date" class="date" placeholder="DOB"><br>
+            E-MAIL: <input type="text" class="mail" placeholder="MAIL"><br>
+            <!-- </fieldset> -->
+        </form>
+        <button class="add">SUBMIT</button>
+        <button class="modify" onclick="modification()">MODIFY</button>
+    </div>
+    <div class="btn-div">
+        <button class="get">GET</button>
+        <!-- <button class="delete">DELETE</button> -->
+    </div>
+
+    <div class="printdata">
+        <table class="data">
+            <tr class="details-head">
+                <th>CONTACT NAME</th>
+                <th>PHONE NUMBER</th>
+                <th>DOB</th>
+                <th>MAIL</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+            </tr>
+        </table>
+
+    </div>
+</body>
+<script src="contacts.js"></script>
+</html>
