@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    
+    margin: auto;
+}
+.parent{
+    padding: 12px;
+}
+.parent::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.headbar{
+    background-color: aliceblue;
+    padding: 8px;
+}
+button{
+    border: none;
+    background-color: aliceblue;
+}
+.main-display{
+    background-color: antiquewhite;
+    padding: 6px;
+}
+.main-display::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.items-list{
+    background-color: aquamarine;
+    width: 65%;
+    float: left;
+
+}
+.item{
+    background-color: coral;
+    margin-top: 5px;
+    margin-left: 4px;
+    text-align: center;
+    padding:10px;
+    height:110px ;
+    float: left;
+    width: 24%;
+    /* height: 162px; */
+}
+.orders-list{
+    background-color:cadetblue;
+    width: 35%;
+    /* margin-top: 5px; */
+    padding: 5px;
+    height: 345px;
+    float: left;
+}
+.orders-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h4{
+    margin-top: 4px;
+}
+.rate{
+    margin-top: 15px;
+}
+.clearing{
+    float: right;
+    padding: 3px;
+    border: none;
+}
+.details{
+    width: 100%;
+    margin-top: 5px;
+    padding: 3px;
+}
+.tableinfo{
+    text-align: center;
+}
+.table-data{
+    text-align: center;
+}
+.taxes{
+    float:right;
+    padding-right:85px ;
+}
+.order{
+    width: 48%;
+}
+.payment{
+    width: 48%;
+}
+#discount{
+    width: 128px;
+}
+.itemname{
+    width: 128px;
+}
