@@ -2,7 +2,8 @@ var foods = "posts";
 var demo = "comments", discount;
 var data, idno, indiprice, sum = 0, tax = 0;
 var customer;
-var orderhistory;
+var orderhistory=[];
+var orders=[];
 document.querySelector(".show-list").addEventListener("click", displayorders)
 document.querySelector(".current").addEventListener("click", gettingdata)
 const items = document.querySelector(".items-list")
@@ -18,7 +19,7 @@ async function gettingdata() {
         })
         .then(a => { data = a })
         .catch(error => { console.log(error) })
-    console.log(data)
+    //console.log(data)
     items.innerHTML = "";
     for (var i = 1; i <= data.length; i++) {
         try {
@@ -52,7 +53,10 @@ function additems(i) {
     <td class="itemprice${i} itemprice">${data[i].price}</td>
     </tr>`;
     indiprice = document.querySelector(`.indiprices${i}`).value;
-    document.querySelector(`.indiprices${i}`).addEventListener("input", allert)
+    // orders.push({
+    //                 item:``,
+    //             })
+    document.querySelector(`.indiprices${i}`).addEventListener("focusout", allert)
     idno = i;
 }
 
@@ -62,6 +66,12 @@ function allert() {
     console.log(data)
     console.log(indiprice)
     indiprice = document.querySelector(`.indiprices${idno}`).value;
+    orders.push({
+        item:`${data[idno].name}`,
+        quantity:`${indiprice}`,
+        total:`${data[idno].price * indiprice}`
+    })
+    console.log(orders)
     document.querySelector(`.itemprice${idno}`).innerHTML = `${data[idno].price * indiprice}`
     document.querySelector(`.itemprice${idno}`).innerHTML = `${data[idno].price * indiprice}`
     sum += Number(`${(data[idno].price) * (indiprice)}`);
@@ -84,17 +94,25 @@ document.querySelector(".order").addEventListener("click", senddata)
 
 async function senddata() {
     customer = document.querySelector(".details").value;
+    orderhistory={customer:`${customer}`,
+                        discount:`${discount}`,
+                        tax:`${tax}`,
+                        total:`${sum}`,
+                        orders:orders
+                    }
+    // orderhistory.push(
+    //                     orders=`${orders}`
+    //                  )
+    console.log(orderhistory)
+    console.log(JSON.stringify(orderhistory))
 
     await fetch(`http://localhost:3000/${demo}`, {
-        // method: "POST",
-        // headers: { 'content-type': 'application/json' },
-        // body:JSON.stringify({
-        //     name:`${customer}`,
-        //     quantity:``,
-        //     discount:`${discount}`,
-        //     tax:`${tax}`,
-        //     totalprice:`${sum}`  
-        // })
+        method: "POST",
+        headers: { 'content-type': 'application/json' },
+        
+        body:JSON.stringify({
+            user:orderhistory
+        })
 
     })
         .then(h => { return h.json() })
@@ -103,6 +121,15 @@ async function senddata() {
     console.log(discount);
     console.log(tax);
     console.log(sum);
+    document.querySelector(".details").value = "";
+    document.querySelector(".discountbar").value = "";
+    displaytable.innerHTML = `<tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>`;
+    
+    
 }
 
 function displayorders() {
@@ -110,8 +137,10 @@ function displayorders() {
 }
 document.querySelector(".clear").addEventListener("click", clearing)
 function clearing() {
+  
     alert("clear all");
     document.querySelector(".details").value = "";
+    document.querySelector(".discountbar").value = "";
     displaytable.innerHTML = `<tr>
                                 <th>Item</th>
                                 <th>Quantity</th>
