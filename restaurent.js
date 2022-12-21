@@ -1,8 +1,10 @@
 var foods = "posts";
-var demo="comments",discount;
+var demo = "comments", discount;
 var data, idno, indiprice, sum = 0, tax = 0;
 var customer;
-gettingdata();
+var orderhistory;
+document.querySelector(".show-list").addEventListener("click", displayorders)
+document.querySelector(".current").addEventListener("click", gettingdata)
 const items = document.querySelector(".items-list")
 async function gettingdata() {
     await fetch(`http://localhost:3000/${foods}`, {
@@ -64,21 +66,21 @@ function allert() {
     document.querySelector(`.itemprice${idno}`).innerHTML = `${data[idno].price * indiprice}`
     sum += Number(`${(data[idno].price) * (indiprice)}`);
     //console.log(sum)
-    tax += (4 / sum) * 100;
-    tax=Math.trunc(tax);
+    tax += (sum * 4) / 100;
+    tax = Math.trunc(tax);
     sum += tax;
     sum = Math.trunc(sum)
-    discount=document.querySelector(".discountbar").value;
-    
-    discount=Math.trunc((discount/sum)*100);
-    sum-=discount;
+    discount = document.querySelector(".discountbar").value;
+
+    discount = Math.trunc((discount * sum) / 100);
+    sum -= discount;
     console.log(discount);
-    document.querySelector(".totaldiscount").innerHTML=`${discount}`
+    document.querySelector(".totaldiscount").innerHTML = `${discount}`
     document.querySelector(".total").innerHTML = `${sum}`
     document.querySelector(".taxes").innerHTML = `${tax}`
-    
+
 }
-document.querySelector(".order").addEventListener("click",senddata)
+document.querySelector(".order").addEventListener("click", senddata)
 
 async function senddata() {
     customer = document.querySelector(".details").value;
@@ -95,10 +97,24 @@ async function senddata() {
         // })
 
     })
-    .then(h=>{return h.json()})
-    .then(b=>{console.log(b)})
+        .then(h => { return h.json() })
+        .then(b => { console.log(b) })
     console.log(customer);
     console.log(discount);
     console.log(tax);
     console.log(sum);
+}
+
+function displayorders() {
+    alert("no orders till now")
+}
+document.querySelector(".clear").addEventListener("click", clearing)
+function clearing() {
+    alert("clear all");
+    document.querySelector(".details").value = "";
+    displaytable.innerHTML = `<tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>`;
 }
