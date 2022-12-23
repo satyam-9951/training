@@ -1,0 +1,137 @@
+{
+  "posts": [
+    {
+      "name": "Idle",
+      "price": 20,
+      "id": 1
+    },
+    {
+      "name": "Chapathi",
+      "price": 30,
+      "id": 2
+    },
+    {
+      "name": "Dosa",
+      "price": 30,
+      "id": 3
+    },
+    {
+      "name": "Wada",
+      "price": 25,
+      "id": 4
+    },
+    {
+      "name": "Puri",
+      "price": 30,
+      "id": 5
+    },
+    {
+      "name": "Veg Fried Rice",
+      "price": 80,
+      "id": 6
+    },
+    {
+      "name": "Non veg Fried Rice",
+      "price": 110,
+      "id": 7
+    },
+    {
+      "name": "Veg Biryani",
+      "price": 90,
+      "id": 8
+    },
+    {
+      "name": "Non Veg Biryani",
+      "price": 150,
+      "id": 9
+    },
+    {
+      "name": "Meals",
+      "price": 70,
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "user": {
+        "customer": "sathya",
+        "discount": "72",
+        "tax": "126",
+        "total": "1371",
+        "orders": [
+          {
+            "item": "Non Veg Biryani",
+            "quantity": "5",
+            "total": "750"
+          },
+          {
+            "item": "Veg Biryani",
+            "quantity": "4",
+            "total": "360"
+          },
+          {
+            "item": "Wada",
+            "quantity": "8",
+            "total": "200"
+          }
+        ]
+      },
+      "id": 1
+    },
+    {
+      "user": {
+        "customer": "rocky",
+        "discount": "0",
+        "tax": "54",
+        "total": "885",
+        "orders": [
+          {
+            "item": "Veg Biryani",
+            "quantity": "6",
+            "total": "540"
+          },
+          {
+            "item": "Puri",
+            "quantity": "9",
+            "total": "270"
+          }
+        ]
+      },
+      "id": 2
+    },
+    {
+      "user": {
+        "customer": "sam",
+        "discount": "0",
+        "tax": "41",
+        "total": "423",
+        "orders": [
+          {
+            "item": "Non Veg Biryani",
+            "quantity": "1",
+            "total": "150"
+          },
+          {
+            "item": "Veg Biryani",
+            "quantity": "1",
+            "total": "90"
+          },
+          {
+            "item": "Wada",
+            "quantity": "1",
+            "total": "25"
+          },
+          {
+            "item": "Meals",
+            "quantity": "1",
+            "total": "70"
+          }
+        ]
+      },
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

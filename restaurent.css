@@ -1,0 +1,172 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    
+    margin: auto;
+}
+.parent{
+    padding: 12px;
+}
+.parent::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.headbar{
+    background-color: aliceblue;
+    padding: 8px;
+}
+button{
+    border: none;
+    background-color: aliceblue;
+}
+.main-display{
+    background-color:;
+    padding: 6px;
+}
+.main-display::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.items-list{
+    background-color:;
+    width: 65%;
+    float: left;
+
+}
+.item{
+    background-color:gainsboro;
+    margin-top: 5px;
+    margin-left: 4px;
+    text-align: center;
+    padding:10px;
+    height:110px ;
+    float: left;
+    width: 24%;
+    border-bottom: 5px solid blue;
+    /* height: 162px; */
+}
+.orders-list{
+    background-color:gainsboro;
+    width: 35%;
+    margin-top: 5px;
+    padding: 5px;
+    height: 345px;
+    float: right;
+}
+.orders-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h4{
+    margin-top: 4px;
+}
+.rate{
+    margin-top: 15px;
+}
+.clearing{
+    float: right;
+    padding: 3px;
+    border: none;
+}
+.details{
+    width: 100%;
+    margin-top: 5px;
+    padding: 3px;
+}
+.tableinfo{
+    text-align: center;
+}
+.table-data{
+    text-align: center;
+}
+.taxes{
+    float:right;
+    padding-right:85px ;
+}
+.order{
+    width: 48%;
+    background-color: green;
+}
+.payment{
+    width: 48%;
+    background-color: darkorange;
+}
+#discount{
+    width: 128px;
+}
+.itemname{
+    width: 128px;
+}
+.bill-bottom{
+    float: left;
+    /* position: relative;
+    position: fixed;
+    bottom: 0px;
+    top: 250px; */
+    width: 100%;
+    position: relative;
+    bottom: px;
+}
+.orders{
+    background-color:;
+    width: 100%;
+    height: 222px;
+    overflow: scroll;
+}
+.clear{
+    float: right;
+}
+.history-table{
+    margin: auto;
+    background-color: cadetblue;
+    height: 500px;
+    width: 1000px;
+}
+.datahead,.heads{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+.historytable-border,.oditems,.historytable-borders{
+    /* border-bottom: 2px solid black; */
+    text-align: center;
+    width: 100%;
+}
+.displaydata,.displaydatas{
+    border-bottom: 2px solid black;
+}
+.viewdetails{
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: aqua;
+}
+.brief{
+    background-color:beige;
+    height: 400px;
+    width: 600px;
+    margin:auto;
+}
+.close,.close1{
+    float: right;
+}
+.tablealign{
+    width: 100%;
+    overflow: scroll;
+    height: 383px;
+}
+.final{
+    background-color: aqua;
+    width: 100%;
+    position: relative;
+    bottom:0px;
+}
+

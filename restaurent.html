@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurent.css">
+</head>
+
+<body>
+    <div class="parent">
+
+        <header class="headbar">
+            <button class="show-list">Orders</button>
+            <button class="current">Current</button>
+        </header>
+
+        <div class="main-display">
+
+            <div class="items-list">
+
+                <!-- <div class="item">
+                    <h4>hello</h4>
+                    <p>price</p>
+                </div>-->
+            </div>
+
+            <div class="orders-list">
+                <div>Table 5| Max
+                    <button class="clear">clear</button>
+                </div>
+                <input class="details" type="text" value="">
+                <div class="orders">
+                    <div class="tableinfo">
+                        <table class="table-data">
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+
+                            <!-- 
+                        <tr>
+                            <td>DISCOUNT</td>
+                            <td><input type="number"></td>
+                            <td>200</td>
+                        </tr> -->
+                        </table>
+                    </div>
+                </div>
+                <div class="bill-bottom">
+                    <table>
+                        <td id="discount">DISCOUNT</td>
+                        <td><input type="number" class="discountbar"></td>
+                        <td class="totaldiscount"></td>
+                    </table>
+                    <p>Taxes <span class="taxes"></span></p>
+                    <button class="order">Order Ticket &nbsp;(F9)</button>
+                    <button class="payment">Charge <span class="total">2000</span> &nbsp;(F2)</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="history-table">
+        <span class="close">&times;</span>
+        <table class="historytable-border">
+            <tr class="historytable-border">
+                <th class="datahead">Serial.no</th>
+                <th class="datahead">Customer name</th>
+                <th class="datahead">billing-amount</th>
+                <th class="datahead">view-history</th>
+            </tr>
+            <tbody class="tabledata">
+                <!-- <tr>
+                    <td class="displaydata">hello</td>
+                    <td class="displaydata">hello</td>
+                    <td class="displaydata">hello</td>
+                    <td class="displaydata">hello</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="brief">
+        <span class="close1">&times;</span>
+        <div class="tablealign">
+            <table class="oditems">
+                <tr class="historytable-borders">
+                    <th class="heads">Item</th>
+                    <th class="heads">Quantity</th>
+                    <th class="heads">Cost</th>
+
+                </tr>
+                <tbody class="food-list">
+                    <!-- <tr class="historytable-borders">
+                    <td class="displaydatas">welcome</td>
+                    <td class="displaydatas">welcome</td>
+                </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="final">
+            <p>total-discount:<span class="print">0</span> &nbsp;
+                total-tax:<span class="total-tax">0</span> &nbsp;
+                total-price:<span class="total-price">0</span>
+
+            </p>
+        </div>
+    </div>
+</body>
+<script src="restaurent.js"></script>
+
+</html>
