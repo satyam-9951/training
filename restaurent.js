@@ -7,6 +7,7 @@ var orders = [];
 var totalhistory;
 var displaydata;
 var present;
+temp=-1;
 
 
 var showing = document.querySelector(".history-table");
@@ -18,9 +19,9 @@ document.querySelector(".show-list").addEventListener("click", orderstable)
 document.querySelector(".current").addEventListener("click", gettingdata)
 const items = document.querySelector(".items-list")
 async function gettingdata() {
-    sum=0;
-    tax=0;
-    discount=0;
+    sum = 0;
+    tax = 0;
+    discount = 0;
     await fetch(`http://localhost:3000/${foods}`, {
         method: "GET",
         headers: { 'content-type': 'application/json' }
@@ -53,7 +54,7 @@ function additems(i) {
     console.log(i)
     // document.querySelector(`.items${i}`).disabled=true;
     // document.getElementById(`hai${i}`).disabled = "true";
-   
+
     console.log("helo")
     console.log(data)
     console.log(data[i])
@@ -66,36 +67,48 @@ function additems(i) {
     // <tr>`;
     displaytable.innerHTML += `<tr>
     <td class="itemname">${data[i].name}</td>
-    <td><input type="number" value="1" class="indiprices${i} indiprices"></td>
+    <td><input type="number" onfocusout="takingorder(${i})" value="1" class="indiprices${i} indiprices"></td>
     <td class="itemprice${i} itemprice">${data[i].price}</td>
     </tr>`;
     indiprice = document.querySelector(`.indiprices${i}`).value;
     // orders.push({
     //                 item:``,
     //             })
-    document.querySelector(`.indiprices${i}`).addEventListener("focusout", allert)
     console.log(i)
     idno = i;
+    // document.querySelector(`.indiprices${idno}`).addEventListener("focusout", takingorder)
     // document.querySelector(`.items${i}`).removeEventListener("onclick",`additems(${i}`)
 }
 
-function allert() {
-    // alert("hello")
+function takingorder(i) {
+    console.log(i)
     console.log(idno)
     console.log(data)
     console.log(indiprice)
-    indiprice = document.querySelector(`.indiprices${idno}`).value;
-    indiprice =1*indiprice;
-    orders.push({
-        item: `${data[idno].name}`,
-        quantity: `${indiprice}`,
-        total: `${data[idno].price * indiprice}`
-    })
+    indiprice = document.querySelector(`.indiprices${i}`).value;
+    indiprice = 1 * indiprice;
+    // if(`${data[idno].name}`==)
+    let person = `${data[i].name}`;
+    console.log(person)
+    let orderresult = orders.includes(person);
+    console.log(orderresult);
+    console.log(orders.length);
+    console.log(orders.includes([0].id))
+       if(orderresult==false){
+        orders.push({
+            item: `${data[i].name}`, 
+            quantity: `${indiprice}`,
+            total: `${data[i].price}`,
+            id:`${data[i].id}`
+            // key:`${temp++}`
+        })}
+        else{
+            console.log("already replaced")
+        }
     console.log(orders)
-    document.querySelector(`.itemprice${idno}`).innerHTML = `${data[idno].price * indiprice}`
-    document.querySelector(`.itemprice${idno}`).innerHTML = `${data[idno].price * indiprice}`
-    sum += Number(`${(data[idno].price) * (indiprice)}`);
-    //console.log(sum)
+    document.querySelector(`.itemprice${i}`).innerHTML = `${data[i].price * indiprice}`
+    sum += Number(`${(data[i].price) * (indiprice)}`);
+    console.log(sum);
     tax += (sum * 4) / 100;
     tax = Math.trunc(tax);
     sum += tax;
@@ -108,8 +121,8 @@ function allert() {
     document.querySelector(".totaldiscount").innerHTML = `${discount}`
     document.querySelector(".total").innerHTML = `${sum}`
     document.querySelector(".taxes").innerHTML = `${tax}`
-
 }
+
 document.querySelector(".order").addEventListener("click", senddata)
 
 async function senddata() {
@@ -180,6 +193,7 @@ async function orderstable() {
 
     console.log(displaydata)
     // console.log(displaydata[0].user.customer)
+    showhistory.innerHTML = "";
     for (let p in displaydata) {
         console.log(p)
         console.log(displaydata[p].user.customer)
@@ -209,10 +223,10 @@ function breifdetail(p) {
                             <td class="displaydatas">${present[k].total}</td>
                         </tr> `
 
-         document.querySelector(".print").innerHTML=`${displaydata[p].user.discount}`;
-         document.querySelector(".total-tax").innerHTML=`${displaydata[p].user.tax}`;             
-         document.querySelector(".total-price").innerHTML=`${displaydata[p].user.total}`;               
-              
+        document.querySelector(".print").innerHTML = `${displaydata[p].user.discount}`;
+        document.querySelector(".total-tax").innerHTML = `${displaydata[p].user.tax}`;
+        document.querySelector(".total-price").innerHTML = `${displaydata[p].user.total}`;
+
 
     }
 }
