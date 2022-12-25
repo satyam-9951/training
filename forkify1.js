@@ -104,8 +104,10 @@ async function printmaterials(i){
 		source=ingreds.data.recipe.source_url;
 		console.log(source)
 		displayimage.innerHTML=await `<img class="items" src="${ingreds.data.recipe.image_url}"></div>`;
-		// document.querySelector(".direction").href=`${source}`;
-		learning.setAttribute("href",source)
+		// learning.href=`"${source}"`;
+		// learning.setAttribute("href",`"${source}"`);
+		// learning.setAttribute()
+		learning.href = "http://www.cnn.com/"; 
 
 }
 
