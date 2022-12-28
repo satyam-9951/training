@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "image": "ux-interface.png",
+      "name": "UX Design",
+      "compatibility": "Mobile App, Website",
+      "number": "01",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 1
+    },
+    {
+      "image": "gaming.png",
+      "name": "Game Design",
+      "compatibility": "Mobile App, Website",
+      "number": "02",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 2
+    },
+    {
+      "image": "design.png",
+      "name": "Graphic Design",
+      "compatibility": "Mobile App, Website",
+      "number": "03",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 3
+    },
+    {
+      "image": "web-design.png",
+      "name": "Web Design",
+      "compatibility": "Mobile App, Website",
+      "number": "04",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 4
+    },
+    {
+      "image": "mobile-development.png",
+      "name": "App Development",
+      "compatibility": "Mobile App, Website",
+      "number": "05",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 5
+    },
+    {
+      "image": "digital-marketing.png",
+      "name": "Digital Marketing",
+      "compatibility": "Mobile App, Website",
+      "number": "06",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
