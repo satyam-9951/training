@@ -5,6 +5,7 @@
       "name": "UX Design",
       "compatibility": "Mobile App, Website",
       "number": "01",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 1
     },
@@ -13,6 +14,7 @@
       "name": "Game Design",
       "compatibility": "Mobile App, Website",
       "number": "02",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 2
     },
@@ -21,6 +23,7 @@
       "name": "Graphic Design",
       "compatibility": "Mobile App, Website",
       "number": "03",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 3
     },
@@ -29,6 +32,7 @@
       "name": "Web Design",
       "compatibility": "Mobile App, Website",
       "number": "04",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 4
     },
@@ -37,6 +41,7 @@
       "name": "App Development",
       "compatibility": "Mobile App, Website",
       "number": "05",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 5
     },
@@ -45,8 +50,18 @@
       "name": "Digital Marketing",
       "compatibility": "Mobile App, Website",
       "number": "06",
+      "status":"ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 6
+    },
+    {
+      "image": "gaming.png",
+      "name": "Game Design",
+      "compatibility": "Mobile App, Website",
+      "number": "07",
+      "status":"IN ACTIVE",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "id": 7
     }
   ],
   "comments": [],
