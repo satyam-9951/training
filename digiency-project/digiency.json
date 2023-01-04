@@ -82,7 +82,35 @@
       "id": 9
     }
   ],
-  "comments": [],
+  "feedback": [
+    {
+      "feedback_name": "Philip Levin",
+      "image": "./Image.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 1
+    },
+    {
+      "feedback_name": "Linclon Lipshutz",
+      "image": "./Image1.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 2
+    },
+    {
+      "feedback_name": "Craig Siphron",
+      "image": "./Image2.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 3
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
