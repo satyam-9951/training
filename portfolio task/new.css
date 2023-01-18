@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.whole-container{
+    background-color: #ebccea;
+}
+.logo{
+    width: 100px;
+    border-radius: 70%;
+}
+.hire-btn{
+    color: #eb0ce3;
+}
+.hire-btn:hover{
+    background-color: #eb0ce3;
+    color: white;
+}
+.left-side{
+    background-color: #ebccea;
+}
+.right-side{
+    background-color: #ebccea
+}
+.profile{
+    text-align: center;
+}
+.pic{
+    width: 80px;
+    border-radius: 50px;
+}
+.specs{
+    list-style: none;
+}
+.hr1{
+    width: 279px;
+}
+.specific-stat{
+    color: #eb0ce3;
+    border: 3px solid #eb0ce3;
+}
+.resume{
+    background-color: #eb0ce3;
+    color: white;
+}
+.icon{
+    width: 20px;
+}
+.home::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.indi-card{
+    float: left;
+    width: 247px;
+}
+.btn-link{
+    text-decoration: none;
+    color:black;
+}
+.home-matter{
+    
+}
