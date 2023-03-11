@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<title>
+		NUMBER GAME
+	</title>
+	<head>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<style>
+		.body{
+			background-color:black;
+			width:1200px;
+			margin:auto;
+			font-family:'Press Start 2P', bold;
+			
+		}
+		.buttons{
+			margin:25px;
+			margin-left:45px;
+			height:40px;
+			width:150px;
+			font-family:'Press Start 2P', bold;
+			
+		}
+		.button{
+			margin:25px;
+			margin-left:45px;
+			height:40px;
+			width:150px;
+			font-family:'Press Start 2P', bold;
+			
+		}
+		
+		.trails{
+			text-align:right;
+			margin-top:-50px;
+			color:white;
+		}
+		h1{
+			text-align:center;
+			color:white;
+		}
+		hr{
+			background-color:white;
+			height:10px;
+			margin-top:60px;
+		}
+		
+		.display{
+			background-color:white;
+			color:black;
+			width:80px;
+			height:80px;
+			margin:auto;
+			margin-top:-70px;
+		}
+		h2{
+			
+			padding:30px
+		}
+		.input{
+			width:250px;
+			height:100px;
+			margin-top:40px;
+			border-color:white;
+			border-width:5px;
+			color:white;
+			background-color:black;
+			font-family:'Press Start 2P', bold;
+			text-align:center;
+			
+			
+			
+		}
+		.left{
+			background-color:;
+			margin-left:200px;
+			margin-top:100px;
+			
+			
+		}
+		.right{
+			background-color:;
+			float:right;
+			margin-top:-240px;
+			margin-right:200px;
+			color:
+			
+			
+		}
+		
+		h3{
+			padding:20px;
+			color:white;
+		}
+		
+		</style>
+	</head>
+	<body class="body">
+		<div class="top">
+				
+				<input class="buttons" type="button" value="again!" onclick="again()">
+				<h3 class="trails">(Between 1 to 20)</h3>
+				<h1>Guess My Number!</h1>
+				<hr>
+				
+				<div class="display">
+					<h2 id="output">?<h2>
+				</div>
+		</div>
+		<div class="left">
+				<input class="input" type="text" placeholder="enter between 1-20"><br>
+				<input class="button"type="button" value="check!" onclick="check()"><br>
+				
+		<div class="right">
+				<h3 id="range">Start Guessing....</h3>
+			<h3 id="score">💯️   Score:20 </h3>
+			<h3 id="high">🎖️   Highscore: 0</h3>
+			</div>
+		</div>
+		
+	<script src="game.js"></script>
+	</body>
+</html>
