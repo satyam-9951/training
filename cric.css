@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container,
+.main {
+    width: 1200px;
+    margin: auto;
+    background-color: #efefef;
+}
+
+.heading {
+    background-color: #6ab43e;
+}
+
+.logo-image {
+    width: auto;
+    height: 45px;
+}
+
+.specific-button {
+    background-color: aliceblue;
+}
+
+.specific-button:hover {
+    background-color: #6ab43e;
+}
+
+.individual-blocks {
+    background-color: #ffffff;
+    width: 24%;
+}
+
+.series-heading {
+    font-size: 28px;
+    font-style: italic;
+}
+
+.series-dates {
+    font-size: 24px;
+    color: darkgray;
+}
+
+.series-type {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.flag-logo {
+    width: 50px;
+}
+
+.Series-datails-btn {
+    background-color: #0d6efd;
+    color: #ffffff;
+    width: 60%;
+}
+
+.match-time {
+    color: darkgray;
+}
+
+.match-card-image {
+    background-image: url(./matchbacground.jpg);
+}
+
+.match-btn {
+    color: #ffffff;
+    background-color: #6ab43e;
+}
+.match-card{
+    background-image: url(./matchcardbackground.jpg);
+    background-size: cover;
+}
+.schedule-head{
+    background-color: #ffffff;
+}
+.schedule-list{
+    list-style: none;
+}
+.line{
+    background-color: black;
+    height: 2px;
+}

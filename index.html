@@ -1,36 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Javascript coding challenges - DOM</title>
-	<link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <main>
-      <section class="player player--0 player--active" id="player player--0 player--active" >
-        <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">0</p>
-        </div>
-      </section>
-      <section1 class="player player--1" id="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--1">0</p>
-        </div>
-      </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new" onclick="again()">🔄 New game</button>
-      <button class="btn btn--roll" onclick="rolling()">🎲 Roll dice</button>
-      <button class="btn btn--hold" onclick="shift()">📥 Hold</button>
-    </main>
-    <script src="dicescript.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket info</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./cric.css">
+</head>
+
+<body>
+    <div class="container main justify-content-center">
+        <div class="row heading mb-2">
+            <div class="col-3 logo">
+                <img class="logo-image" src="./criclogo.png" alt="" srcset="">
+            </div>
+            <div class="col-9 d-flex float-end text-center">
+                <div class="col-4">
+                    <h3>Home</h3>
+                </div>
+                <div class="col-4">
+                    <h3>Subscribe</h3>
+                </div>
+                <div class="col-4">
+                    <h3>Profile</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head buttons section -->
+        <div class="row my-3 justify-content-center">
+            <div class="col-6 text-center d-flex">
+                <div class="col-2 py-2 specific-button series">Series</div>
+                <div class="col-2 py-2 specific-button matches">Matches</div>
+                <div class="col-2 py-2 specific-button schedule">Schedule</div>
+                <div class="col-2 py-2 specific-button result">Results</div>
+                <div class="col-2 py-2 specific-button players">Players</div>
+                <div class="col-2 py-2 specific-button Points">Points</div>
+            </div>
+        </div>
+
+        <!-- series body -->
+
+        <div class="row series-content justify-content-center">
+
+            <div class="card mx-1 my-2 px-2 py-2 individual-blocks">
+                <h2 class="series-heading">
+                    India vs Pakistan in India, 2023
+                </h2>
+                <h3 class="series-dates">
+                    2023,june 7 to june 20
+                </h3>
+                <h3 class="series-type">
+                    5 ODI's
+                </h3>
+                <hr>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <hr>
+                <button class="Series-datails-btn m-auto">Series details</button>
+            </div>
+
+            <div class="card mx-1 my-2 px-2 py-2 individual-blocks">
+                <h2 class="series-heading">
+                    India vs Pakistan in India, 2023
+                </h2>
+                <h3 class="series-dates">
+                    2023,june 7 to june 20
+                </h3>
+                <h3 class="series-type">
+                    5 ODI's
+                </h3>
+                <hr>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <hr>
+                <button class="Series-datails-btn m-auto">Series details</button>
+            </div>
+
+            <div class="card mx-1 my-2 px-2 py-2 individual-blocks">
+                <h2 class="series-heading">
+                    India vs Pakistan in India, 2023
+                </h2>
+                <h3 class="series-dates">
+                    2023,june 7 to june 20
+                </h3>
+                <h3 class="series-type">
+                    5 ODI's
+                </h3>
+                <hr>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <hr>
+                <button class="Series-datails-btn m-auto">Series details</button>
+            </div>
+
+            <div class="card mx-1 my-2 px-2 py-2 individual-blocks">
+                <h2 class="series-heading">
+                    India vs Pakistan in India, 2023
+                </h2>
+                <h3 class="series-dates">
+                    2023,june 7 to june 20
+                </h3>
+                <h3 class="series-type">
+                    5 ODI's
+                </h3>
+                <hr>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                    <div class="col-3 text-center">
+                        <img class="flag-logo" src="./download.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <hr>
+                <button class="Series-datails-btn m-auto">Series details</button>
+            </div>
+        </div>
+
+        <!-- matches body section -->
+       <div class="row matches-content series-content justify-content-center">
+
+            <div class="card px-0 individual-blocks ">
+                <div class="card-body text-center match-card">
+                    <h3 class="card-title"> eden gardens</h3>
+                    <h5 class="match-time">3pm saturday</h5>
+                    <hr class="my-2">
+                    <p>India</p>
+                    <p>v</p>
+                    <p>Pakistan</p>
+                    <hr class="my-2">
+                    <p>Match Not Started Yet</p>
+                </div>
+
+                <div class="card-footer match-card-image">
+                    <button class="match-btn">Match Details</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Schedule section -->
+        <div class="row schedule-content series-content justify-content-center">
+
+            <div class="col-12 px-2 d-flex schedule-head">
+                <div class="col-5">
+                    <h3>Series</h3>
+                </div>
+                <div class="col-5">
+                    <h3>Match/Venue</h3>
+                </div>
+                <div class="col-2">
+                    <h3>Date/Time</h3>
+                </div>
+            </div>
+            <hr class="my-0 line">
+            <ul class="schedule-list px-0">
+                <li>
+                    <div class="col-12 px-2 d-flex schedule-head">
+                        <div class="col-5">
+                            <h3>Series</h3>
+                        </div>
+                        <div class="col-5">
+                            <h3>Match/Venue</h3>
+                        </div>
+                        <div class="col-2">
+                            <h3>Date/Time</h3>
+                        </div>
+                    </div>
+                    <hr class="my-0">
+                </li>
+                <li>
+                    <div class="col-12 px-2 d-flex schedule-head">
+                        <div class="col-5">
+                            <h3>Series</h3>
+                        </div>
+                        <div class="col-5">
+                            <h3>Match/Venue</h3>
+                        </div>
+                        <div class="col-2">
+                            <h3>Date/Time</h3>
+                        </div>
+                    </div>
+                    <hr class="my-0">
+                </li>
+            </ul>
+
+        </div>
+    </div> 
+</body>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./cric.js"></script>
+
 </html>
