@@ -1,30 +1,49 @@
-// let seriescall = "https://api.cricapi.com/v1/series?apikey=0fa75ae2-01d8-4235-b0c0-2766fc000477&offset=0";
-let seriescall = "https://api.cricapi.com/v1/matches?apikey=0fa75ae2-01d8-4235-b0c0-2766fc000477&offset=0";
+var btnid=document.getElementsByClassName("specific-button");
+var specificid;
+
+for(var a=0;a<btnid.length;a++){
+    console.log(btnid[a].id)
+    specificid=document.getElementById(btnid[a].id).addEventListener("click",execution)
+    
+}
+var calling,req;
+function execution() {
+    console.log(btnid)
+    var key = document.getElementById(btnid[a].id);
+    req = key.innerText;
+    var links = {
+        Series: "https://api.cricapi.com/v1/series?apikey=0fa75ae2-01d8-4235-b0c0-2766fc000477&offset=0",
+        Matches: "https://api.cricapi.com/v1/matches?apikey=0fa75ae2-01d8-4235-b0c0-2766fc000477&offset=0"
+    }
+    console.log(req)
+    console.log(Object.keys(links))
+    calling=links[req];
+    // series();
+}
+
 function date() {
     const d = new Date();
-    const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    let m=months[d.getMonth()]
-    var today=(d.getDate() +"th "+" "+m+" "+d.getFullYear());
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let m = months[d.getMonth()]
+    var today = (d.getDate() + "th " + " " + m + " " + d.getFullYear());
     console.log(today)
 }
 date();
 
-// series();
-document.querySelector(".series").addEventListener("click",series);
+// document.querySelector(".series").addEventListener("click", execution);
 var seriesdata;
-async function series() {
-    await fetch(seriescall, {
-        method: "GET",
-    })
-        .then(x => { return x.json() })
-        .then(x => (seriesdata = x.data))
-    console.log(seriesdata)
-    document.querySelector(".series-content").innerHTML = "";
-    // printingdata();
-    matches();
-}
+// async function series() {
+//     await fetch(calling, {
+//         method: "GET",
+//     })
+//         .then(x => { return x.json() })
+//         .then(x => (seriesdata = x.data))
+//     console.log(seriesdata)
+//     document.querySelector(".series-content").innerHTML = "";
+//     valueof(req)();
+// }
 
-function printingdata() {
+function Series() {
     document.querySelector(".series-content").innerHTML = "";
     for (const key in seriesdata) {
         document.querySelector(".series-content").innerHTML +=
