@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 1200px;
+    margin: auto;
+}
+.container{
+    background-color: bisque;
+}
+form{
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    
+}

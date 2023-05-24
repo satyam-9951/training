@@ -5,7 +5,7 @@
       "name": "UX Design",
       "compatibility": "Mobile App, Website",
       "number": "01",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 1
     },
@@ -14,7 +14,7 @@
       "name": "Game Design",
       "compatibility": "Mobile App, Website",
       "number": "02",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 2
     },
@@ -23,7 +23,7 @@
       "name": "Graphic Design",
       "compatibility": "Mobile App, Website",
       "number": "03",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 3
     },
@@ -32,7 +32,7 @@
       "name": "Web Design",
       "compatibility": "Mobile App, Website",
       "number": "04",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 4
     },
@@ -41,7 +41,7 @@
       "name": "App Development",
       "compatibility": "Mobile App, Website",
       "number": "05",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 5
     },
@@ -50,7 +50,7 @@
       "name": "Digital Marketing",
       "compatibility": "Mobile App, Website",
       "number": "06",
-      "status":"ACTIVE",
+      "status": "ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 6
     },
@@ -59,13 +59,114 @@
       "name": "Game Design",
       "compatibility": "Mobile App, Website",
       "number": "07",
-      "status":"IN ACTIVE",
+      "status": "IN ACTIVE",
       "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
       "id": 7
+    },
+    {
+      "image": "web-design.png",
+      "name": "Web Design",
+      "compatibility": "Mobile App, Website",
+      "number": "08",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "status": "ACTIVE",
+      "id": 8
+    },
+    {
+      "image": "web-design.png",
+      "name": "Web Design",
+      "compatibility": "Mobile App, Website",
+      "number": "08",
+      "content": "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut.",
+      "status": "IN ACTIVE",
+      "id": 9
+    },
+    {
+      "id": 10
     }
   ],
-  "comments": [],
-  "profile": {
-    "name": "typicode"
-  }
+  "feedback": [
+    {
+      "feedback_name": "Philip Levin",
+      "image": "./Image.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 1
+    },
+    {
+      "feedback_name": "Linclon Lipshutz",
+      "image": "./Image1.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 2
+    },
+    {
+      "feedback_name": "Craig Siphron",
+      "image": "./Image2.png",
+      "quotes": "./double-quotes-l.png",
+      "position": "CEO / Creative IT",
+      "comment": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.",
+      "rating": "./Component.png",
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "image": "./Image4.png",
+      "id": 1
+    },
+    {
+      "image": "./Image5.png",
+      "id": 2
+    },
+    {
+      "image": "./Image6.png",
+      "id": 3
+    },
+    {
+      "image": "./Image7.png",
+      "id": 4
+    },
+    {
+      "image": "./Image8.png",
+      "id": 5
+    },
+    {
+      "image": "./Image9.png",
+      "id": 6
+    },
+    {
+      "image": "./Image10.png",
+      "id": 7
+    },
+    {
+      "image": "./Image11.png",
+      "id": 8
+    },
+    {
+      "image": "./Image12.png",
+      "id": 9
+    }
+  ],
+  "blog": [
+    {
+      "blog_image": "./Image13.png",
+      "blog_heading": "35 Stellar Graphic Design Blogs to Keep YouEducated and Inspired",
+      "id": 1
+    },
+    {
+      "blog_image": "./Image14.png",
+      "blog_heading": "Ridiculously powerful 2021 iPad Pro may drop this month",
+      "id": 2
+    },
+    {
+      "blog_image": "./Image15.png",
+      "blog_heading": "Memphis Design: the defining look of the 1980s",
+      "id": 3
+    }
+  ]
 }

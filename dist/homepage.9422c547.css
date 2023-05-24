@@ -1,0 +1,117 @@
+* {
+  font-family: Poppins;
+}
+
+body {
+  background-color: #fff7f4;
+}
+
+ul {
+  list-style: none;
+}
+
+.navitem {
+  color: #000;
+}
+
+.talk-btn:hover, .navitem:hover {
+  color: #ff5300;
+}
+
+.talk-btn {
+  background-color: #fff7f4;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.start {
+  background-color: #ff5300;
+  border: none;
+  border-radius: 5px;
+}
+
+.dash {
+  width: 55px;
+  border: 1px solid #ff5300;
+  margin: 0;
+  display: inline-block;
+}
+
+.services-head {
+  text-align: center;
+  margin: auto;
+}
+
+.service {
+  color: #ff5300;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.to-do {
+  font-size: 39.0625px;
+  font-weight: 600;
+}
+
+.specific {
+  border: none;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+.num {
+  color: #efefef;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.services {
+  width: 370px;
+}
+
+.stream {
+  color: #373737;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.service-content, .compatibility {
+  color: #7b7b7b;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main-slider {
+  background-color: #fff7f4;
+}
+
+.specific-feedback {
+  background-color: #fff;
+}
+
+.feedback-name {
+  color: #ff5300;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.slides {
+  color: #7b7b7b;
+}
+
+.feedback-content {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.feedback-position {
+  font-size: 12.8px;
+  font-weight: 300;
+}
+
+.direction {
+  margin-top: 90px;
+}
+
+/*# sourceMappingURL=homepage.9422c547.css.map */

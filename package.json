@@ -1,0 +1,17 @@
+{
+  "name": "digiency-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "adding.js",
+  "scripts": {
+    "start": "parcel homepage.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
+}

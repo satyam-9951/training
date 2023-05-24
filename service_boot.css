@@ -1,0 +1,61 @@
+* {
+    font-family: Poppins;
+  }
+
+  body {
+    background-color: #FFFFFF;
+  }
+
+  h4 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #373737;
+
+  }
+
+  .num {
+    font-weight: 600;
+    font-size: 64px;
+    color: #EFEFEF;
+  }
+
+  .services {
+    width: 370px;
+  }
+
+  h6 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0px;
+    color: #7B7B7B;
+  }
+
+  .dash {
+    width: 55px;
+    margin: 0px;
+    border: 1px solid #FF5300;
+    display: inline-block;
+  }
+
+  .services-head {
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .service {
+    color: #FF5300;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .to-do {
+    font-weight: 600;
+    font-size: 39.0625px;
+  }
+
+  .specific{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    
+  }
