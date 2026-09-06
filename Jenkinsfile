@@ -15,15 +15,18 @@ pipeline {
 
                     echo "Installing Node.js ${NODE_VERSION}..."
 
+                    rm -rf "$NODE_HOME"
                     mkdir -p "$NODE_HOME"
 
                     curl -fsSL \
-                      "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" \
-                      -o node.tar.xz
+                      "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz" \
+                      -o node.tar.gz
 
-                    tar -xJf node.tar.xz --strip-components=1 -C "$NODE_HOME"
+                    tar -xzf node.tar.gz \
+                      --strip-components=1 \
+                      -C "$NODE_HOME"
 
-                    rm -f node.tar.xz
+                    rm -f node.tar.gz
 
                     echo "Node version:"
                     node --version
@@ -46,9 +49,7 @@ pipeline {
 
         stage('Run Test') {
             steps {
-                sh '''
-                    node test.js
-                '''
+                sh 'node test.js'
             }
         }
     }
