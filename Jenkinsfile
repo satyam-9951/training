@@ -1,14 +1,22 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:22'
-        }
-    }
+    agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Check Node.js') {
+            steps {
+                sh '''
+                    echo "Checking Node.js..."
+                    which node || true
+                    node --version || true
+                    npm --version || true
+                '''
             }
         }
 
