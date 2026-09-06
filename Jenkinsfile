@@ -2,32 +2,26 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Run test.js') {
             steps {
-                echo 'Building application...'
-                sh './build.sh'
+                sh 'node test.js'
             }
         }
+    }
 
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                sh './test.sh'
-            }
+    post {
+        success {
+            echo 'test.js executed successfully.'
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-                sh './deploy.sh'
-            }
+        failure {
+            echo 'test.js execution failed.'
         }
     }
 }
