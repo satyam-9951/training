@@ -2,38 +2,28 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Check Node.js') {
+        stage('Install Node.js and npm') {
             steps {
                 sh '''
-                    echo "Checking Node.js..."
-                    which node || true
-                    node --version || true
-                    npm --version || true
+                    sudo apt-get update
+                    sudo apt-get install -y nodejs npm
+
+                    node --version
+                    npm --version
                 '''
             }
         }
 
-        stage('Run test.js') {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Test') {
             steps {
                 sh 'node test.js'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'test.js executed successfully.'
-        }
-
-        failure {
-            echo 'test.js execution failed.'
         }
     }
 }
